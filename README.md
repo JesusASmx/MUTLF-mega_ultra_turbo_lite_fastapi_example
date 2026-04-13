@@ -13,6 +13,11 @@ import kagglehub
 path = kagglehub.dataset_download("sbhatti/financial-sentiment-analysis")
 
 print("Path to dataset files:", path)
+
+import pandas as pd
+
+data = pd.read_csv(path+"\data.csv")
+data.head()
 ```
 
 Donde el y-value es la columna "sentiment" y el x-value es la columna "sentence". Utilicen un transformer pequeñito para que sea agnóstico al vocabulario.
